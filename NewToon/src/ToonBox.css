@@ -1,0 +1,69 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.toon {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.caption-field {
+font-size: 14px;
+position: relative;
+top: -30px;
+}
+
+.caption-field .placeholder {
+    position: absolute;
+    left: 12px;
+    bottom: 50%;
+    top: 11px;
+    transform: translateY(-60%);
+    width: calc(100% - 24px);
+    color: #aaa;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: 
+     top 0.3s ease,
+     color 0.3s ease,
+     font-size 0.3s ease;
+ }
+
+.caption-field input {
+    border: 1px solid white;
+    appearance: none;
+    padding: 12px;
+    border-radius: 3px;
+    width: 250px;
+    font-size: 14px;
+}
+
+.caption-field input:focus {
+    border: none;
+}
+
+
+.caption-field input:focus + .placeholder {
+    top: -3px;
+    font-size: 10px;
+    color: #222;
+}
+
+.caption-field input:not(:placeholder-shown) + .placeholder 
+.caption-field input:focus + .placeholder {
+    top: -10px;
+    font-size: 10px;
+    color: #222;
+}
+
+.caption {
+    height: auto;
+    width: auto;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: dimgray;
+  }
